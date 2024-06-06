@@ -6,10 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Estimation extends Model
 {
-    protected $fillable = ['name', 'description', 'project_id', 'type', 'amount'];
+    protected $fillable = ['name', 'description', 'project_id', 'client_id', 'type', 'amount'];
 
     public function project()
     {
         return $this->belongsTo(Project::class);
+    }
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
     }
 }

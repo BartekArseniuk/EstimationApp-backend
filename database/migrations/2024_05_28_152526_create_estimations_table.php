@@ -15,8 +15,9 @@ class CreateEstimationsTable extends Migration
     {
         Schema::create('estimations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('project_id');
             $table->string('name');
+            $table->unsignedBigInteger('project_id');
+            $table->unsignedBigInteger('client_id');
             $table->text('description')->nullable();
             $table->date('date')->default(now());
             $table->enum('type', ['hourly', 'fixed_price']);
