@@ -18,6 +18,7 @@ class CreateProjectsTable extends Migration
             $table->string('name');
             $table->unsignedBigInteger('client_id');
             $table->foreign('client_id')->references('id')->on('clients');
+            $table->decimal('estimate_sum', 10, 2)->default(0);
             $table->timestamps();
         });
     }

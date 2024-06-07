@@ -14,7 +14,12 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return Project::all();
+        $projects = Project::with('client', 'estimations')->get()->map(function ($project) {
+            $project->estimate = $project->estimate_sum;
+            return $project;
+        });
+        
+        return response()->json($projects);
     }
 
     /**

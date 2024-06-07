@@ -17,4 +17,9 @@ class Project extends Model
     {
         return $this->hasMany(Estimation::class);
     }
+
+    public function getEstimateSumAttribute()
+    {
+        return $this->estimations->sum('amount');
+    }
 }

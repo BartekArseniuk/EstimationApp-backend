@@ -36,8 +36,12 @@ class EstimationController extends Controller
     public function store(Request $request)
     {
         $estimation = Estimation::create($request->all());
+        $project = $estimation->project;
+        $project->estimate_sum = $project->estimations->sum('amount');
+        $project->save();
+        
         return response()->json($estimation, 201);
-    }
+    }    
 
     /**
      * Display the specified resource.
