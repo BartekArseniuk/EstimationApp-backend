@@ -14,9 +14,8 @@ class EstimationController extends Controller
      */
     public function index()
     {
-        return Estimation::all();
+        return Estimation::with('project', 'client')->get();
     }
-
     /**
      * Show the form for creating a new resource.
      *
