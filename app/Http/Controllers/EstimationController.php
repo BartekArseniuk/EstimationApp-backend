@@ -84,6 +84,7 @@ class EstimationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $estimation = Estimation::findOrFail($id);
+        $estimation->delete();
     }
 }
