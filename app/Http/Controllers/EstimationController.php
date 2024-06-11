@@ -73,7 +73,8 @@ class EstimationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $estimation = Estimation::findOrFail($id);
+        $estimation->update($request->all());
     }
 
     /**
