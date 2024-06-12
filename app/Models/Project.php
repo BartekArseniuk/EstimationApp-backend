@@ -22,4 +22,13 @@ class Project extends Model
     {
         return $this->estimations->sum('amount');
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($project) {
+            $project->estimations()->delete();
+        });
+    }
 }
