@@ -1,26 +1,25 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\EstimationController;
 use App\Http\Controllers\PasswordResetController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+Route::middleware(['auth:api'])->group(function () {
+    Route::apiResource('clients', ClientController::class);
+    Route::apiResource('projects', ProjectController::class);
+    Route::apiResource('estimations', EstimationController::class);
+    Route::apiResource('users', UserController::class);
+    Route::post('/register', [AuthController::class, 'register']);
+});
 
-Route::apiResource('clients', ClientController::class);
-Route::apiResource('projects', ProjectController::class);
-Route::apiResource('estimations', EstimationController::class);
-Route::apiResource('users', UserController::class);
+Route::get('/clients', [ClientController::class, 'index']);
+Route::get('/projects', [ProjectController::class, 'index']);
+Route::get('/estimations', [EstimationController::class, 'index']);
 
 Route::post('/login', [AuthController::class, 'login']);
-Route::post('/register', [AuthController::class, 'register']);
+
 
 Route::post('/password/email', [PasswordResetController::class, 'sendResetLinkEmail']);
 Route::get('/reset-password/{token}', [PasswordResetController::class, 'showResetForm'])->name('password.reset');
