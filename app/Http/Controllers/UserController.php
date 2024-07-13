@@ -14,12 +14,6 @@ class UserController extends Controller
         return response()->json($users);
     }
 
-    public function show($id)
-    {
-        $user = User::findOrFail($id);
-        return response()->json($user);
-    }
-
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -36,11 +30,15 @@ class UserController extends Controller
         }
 
         $user->save();
+
+        return response()->json($user, 200);
     }
 
     public function destroy($id)
     {
         $user = User::findOrFail($id);
         $user->delete();
+
+        return response()->json(null, 204);
     }
 }

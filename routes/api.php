@@ -7,9 +7,18 @@ use App\Http\Controllers\EstimationController;
 use App\Http\Controllers\PasswordResetController;
 
 Route::middleware(['auth:api'])->group(function () {
-    Route::apiResource('clients', ClientController::class);
-    Route::apiResource('projects', ProjectController::class);
-    Route::apiResource('estimations', EstimationController::class);
+    Route::post('/clients', [ClientController::class, 'store']);
+    Route::put('/clients/{id}', [ClientController::class, 'update']);
+    Route::delete('/clients/{id}', [ClientController::class, 'destroy']);
+
+    Route::post('/projects', [ProjectController::class, 'store']);
+    Route::put('/projects/{id}', [ProjectController::class, 'update']);
+    Route::delete('/projects/{id}', [ProjectController::class, 'destroy']);
+
+    Route::post('/estimations', [EstimationController::class, 'store']);
+    Route::put('/estimations/{id}', [EstimationController::class, 'update']);
+    Route::delete('/estimations/{id}', [EstimationController::class, 'destroy']);
+
     Route::apiResource('users', UserController::class);
     Route::post('/register', [AuthController::class, 'register']);
 });

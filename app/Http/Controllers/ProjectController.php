@@ -37,11 +37,13 @@ class ProjectController extends Controller
 
         $project = Project::findOrFail($id);
         $project->update($request->all());
+        return response()->json($project, 200);
     }
 
     public function destroy($id)
     {
         $project = Project::findOrFail($id);
         $project->delete();
+        return response()->json(null, 204);
     }
 }

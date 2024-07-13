@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="19" assertions="48" errors="0" failures="0" skipped="0" time="1.441998">
+    <testsuite name="Unit" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.102989">
+      <testsuite name="Tests\Unit\ExampleTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Unit\ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.102989">
+        <testcase name="testBasicTest" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Unit\ExampleTest.php" line="15" assertions="1" time="0.102989"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Feature" tests="18" assertions="47" errors="0" failures="0" skipped="0" time="1.339009">
+      <testsuite name="Tests\Feature\AuthControllerTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\AuthControllerTest.php" tests="2" assertions="12" errors="0" failures="0" skipped="0" time="0.711948">
+        <testcase name="test_can_register_user" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\AuthControllerTest.php" line="24" assertions="6" time="0.689121"/>
+        <testcase name="test_can_login_user" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\AuthControllerTest.php" line="40" assertions="6" time="0.022827"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\ClientsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\ClientsTest.php" tests="4" assertions="8" errors="0" failures="0" skipped="0" time="0.164434">
+        <testcase name="test_can_create_client" class="Tests\Feature\ClientsTest" classname="Tests.Feature.ClientsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\ClientsTest.php" line="24" assertions="2" time="0.046026"/>
+        <testcase name="test_can_get_clients" class="Tests\Feature\ClientsTest" classname="Tests.Feature.ClientsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\ClientsTest.php" line="38" assertions="2" time="0.051408"/>
+        <testcase name="test_can_update_client" class="Tests\Feature\ClientsTest" classname="Tests.Feature.ClientsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\ClientsTest.php" line="64" assertions="2" time="0.039088"/>
+        <testcase name="test_can_delete_client" class="Tests\Feature\ClientsTest" classname="Tests.Feature.ClientsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\ClientsTest.php" line="85" assertions="2" time="0.027912"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\EstimationsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\EstimationsTest.php" tests="4" assertions="8" errors="0" failures="0" skipped="0" time="0.170692">
+        <testcase name="test_can_create_estimation" class="Tests\Feature\EstimationsTest" classname="Tests.Feature.EstimationsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\EstimationsTest.php" line="26" assertions="2" time="0.042889"/>
+        <testcase name="test_can_get_estimations" class="Tests\Feature\EstimationsTest" classname="Tests.Feature.EstimationsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\EstimationsTest.php" line="55" assertions="2" time="0.044148"/>
+        <testcase name="test_can_update_estimation" class="Tests\Feature\EstimationsTest" classname="Tests.Feature.EstimationsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\EstimationsTest.php" line="94" assertions="2" time="0.040037"/>
+        <testcase name="test_can_delete_estimation" class="Tests\Feature\EstimationsTest" classname="Tests.Feature.EstimationsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\EstimationsTest.php" line="131" assertions="2" time="0.043618"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\PasswordResetControllerTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\PasswordResetControllerTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="0.054634">
+        <testcase name="test_can_reset_password" class="Tests\Feature\PasswordResetControllerTest" classname="Tests.Feature.PasswordResetControllerTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\PasswordResetControllerTest.php" line="14" assertions="3" time="0.054634"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\ProjectsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\ProjectsTest.php" tests="4" assertions="8" errors="0" failures="0" skipped="0" time="0.117397">
+        <testcase name="test_can_create_project" class="Tests\Feature\ProjectsTest" classname="Tests.Feature.ProjectsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\ProjectsTest.php" line="25" assertions="2" time="0.019167"/>
+        <testcase name="test_can_get_projects" class="Tests\Feature\ProjectsTest" classname="Tests.Feature.ProjectsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\ProjectsTest.php" line="44" assertions="2" time="0.034720"/>
+        <testcase name="test_can_update_project" class="Tests\Feature\ProjectsTest" classname="Tests.Feature.ProjectsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\ProjectsTest.php" line="68" assertions="2" time="0.031843"/>
+        <testcase name="test_can_delete_project" class="Tests\Feature\ProjectsTest" classname="Tests.Feature.ProjectsTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\ProjectsTest.php" line="92" assertions="2" time="0.031667"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\UsersTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\UsersTest.php" tests="3" assertions="8" errors="0" failures="0" skipped="0" time="0.119905">
+        <testcase name="test_can_list_users" class="Tests\Feature\UsersTest" classname="Tests.Feature.UsersTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\UsersTest.php" line="24" assertions="4" time="0.051992"/>
+        <testcase name="test_can_update_user" class="Tests\Feature\UsersTest" classname="Tests.Feature.UsersTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\UsersTest.php" line="39" assertions="2" time="0.039631"/>
+        <testcase name="test_can_delete_user" class="Tests\Feature\UsersTest" classname="Tests.Feature.UsersTest" file="C:\MAMP\htdocs\EstimationApp\EstimationApp-backend\tests\Feature\UsersTest.php" line="59" assertions="2" time="0.028282"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

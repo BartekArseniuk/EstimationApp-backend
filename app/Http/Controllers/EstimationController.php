@@ -37,11 +37,15 @@ class EstimationController extends Controller
 
         $estimation = Estimation::findOrFail($id);
         $estimation->update($request->all());
+
+        return response()->json($estimation, 200);
     }
 
     public function destroy($id)
     {
         $estimation = Estimation::findOrFail($id);
         $estimation->delete();
+
+        return response()->json(null, 204);
     }
 }
